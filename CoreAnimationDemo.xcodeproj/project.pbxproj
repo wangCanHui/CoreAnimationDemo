@@ -13,6 +13,8 @@
 		6F2381101DFBFD3800ECC76A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F23810E1DFBFD3800ECC76A /* Main.storyboard */; };
 		6F2381121DFBFD3800ECC76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F2381111DFBFD3800ECC76A /* Assets.xcassets */; };
 		6F2381151DFBFD3800ECC76A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F2381131DFBFD3800ECC76A /* LaunchScreen.storyboard */; };
+		6F23811E1DFBFDC400ECC76A /* CircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23811D1DFBFDC400ECC76A /* CircleButton.m */; };
+		6F2381211DFBFDCC00ECC76A /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2381201DFBFDCC00ECC76A /* UIColor+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		6F2381111DFBFD3800ECC76A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F2381141DFBFD3800ECC76A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F2381161DFBFD3800ECC76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F23811C1DFBFDC400ECC76A /* CircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleButton.h; sourceTree = "<group>"; };
+		6F23811D1DFBFDC400ECC76A /* CircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleButton.m; sourceTree = "<group>"; };
+		6F23811F1DFBFDCC00ECC76A /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		6F2381201DFBFDCC00ECC76A /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				6F2381091DFBFD3800ECC76A /* AppDelegate.m */,
 				6F23810B1DFBFD3800ECC76A /* ViewController.h */,
 				6F23810C1DFBFD3800ECC76A /* ViewController.m */,
+				6F23811C1DFBFDC400ECC76A /* CircleButton.h */,
+				6F23811D1DFBFDC400ECC76A /* CircleButton.m */,
+				6F23811F1DFBFDCC00ECC76A /* UIColor+Extension.h */,
+				6F2381201DFBFDCC00ECC76A /* UIColor+Extension.m */,
 				6F23810E1DFBFD3800ECC76A /* Main.storyboard */,
 				6F2381111DFBFD3800ECC76A /* Assets.xcassets */,
 				6F2381131DFBFD3800ECC76A /* LaunchScreen.storyboard */,
@@ -110,7 +120,6 @@
 				TargetAttributes = {
 					6F2381011DFBFD3800ECC76A = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 2L9ZWE43QB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -153,7 +162,9 @@
 			files = (
 				6F23810D1DFBFD3800ECC76A /* ViewController.m in Sources */,
 				6F23810A1DFBFD3800ECC76A /* AppDelegate.m in Sources */,
+				6F2381211DFBFDCC00ECC76A /* UIColor+Extension.m in Sources */,
 				6F2381071DFBFD3800ECC76A /* main.m in Sources */,
+				6F23811E1DFBFDC400ECC76A /* CircleButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +284,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2L9ZWE43QB;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CoreAnimationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.wangCanHui.CoreAnimationDemo;
@@ -285,7 +297,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2L9ZWE43QB;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CoreAnimationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.wangCanHui.CoreAnimationDemo;
@@ -312,6 +325,7 @@
 				6F23811B1DFBFD3800ECC76A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UIColor+Extension.h
 //  coreAnimationDemo
 //
 //  Created by 王灿辉 on 2016/12/10.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface UIColor (Extension)
++(UIColor *)colorWithHex:(NSString *)hex;
++(UIColor *)colorWithHex:(NSString *)hex alpha:(float)alpha;
 @end
-
