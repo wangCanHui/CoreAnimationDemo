@@ -143,7 +143,7 @@
     [self.layer addSublayer:self.runingLine];
 }
 
-// 开始波纹动画
+// 开始波纹动画和圆环旋转动画
 - (void)startWaveAnimation
 {
     // 1. 设置内圆颜色渐变
@@ -184,6 +184,10 @@
                                @(M_PI),
                                @(2 * M_PI)
                                ];
+    rotateAnimation.removedOnCompletion = NO; // 所有的动画都要设置此属性，不然APP进入后台，动画就会停掉
+    rotateAnimation.duration = 2;
+    rotateAnimation.repeatCount = MAXFLOAT;
+    
     // 5. 设置圆环的动画路径
     CABasicAnimation *headAnimation = [CABasicAnimation animation];
     headAnimation.keyPath = @"strokeStart";
@@ -221,10 +225,9 @@
                               endHeadAnimation,
                               endTailAnimation
                               ];
-    animations.repeatCount = INFINITY;
+    animations.repeatCount = MAXFLOAT;
     
-    rotateAnimation.duration = 2;
-    rotateAnimation.repeatCount = INFINITY;
+    animations.removedOnCompletion = NO;
     
     [self.runingLine addAnimation:animations forKey:@"line rotation"];
     [self.runingLine addAnimation:rotateAnimation forKey:@"line transform.rotation"];
@@ -305,9 +308,8 @@
                                       endHeadAnimation,
                                       endTailAnimation
                                       ];
-//            animations.repeatCount = INFINITY;
             animations.removedOnCompletion = NO;
-            // 动画结束后layer保持动画最后的状态
+            // 动画加入后开始之前，layer便处于动画初始状态，动画结束后layer保持动画最后的状态
             animations.fillMode = kCAFillModeBoth;
 //            animations.delegate = self;
             [self.runingLine addAnimation:animations forKey:@"line rotation"];
@@ -370,7 +372,7 @@
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.animations = @[wave,hide];
     
-    group.repeatCount = INFINITY; // 无限次重复
+    group.repeatCount = MAXFLOAT; // 无限次重复
     group.duration = 2; // 一个周期持续时间
     
     group.removedOnCompletion = NO;
